@@ -96,6 +96,9 @@ cc_library {
         override_export_include_dirs: ["include_vndk"],
     },
     srcs: liblog_sources,
+    ldflags: [
+        "-Wl,--allow-shlib-undefined",
+    ],
 
     target: {
         android: {
